@@ -77,7 +77,9 @@ export class DbService {
 
       return {
         success: true,
-        result: user,
+        result: {
+          users: [user], 
+        },
       };
     } catch (error) {
       console.error('Error getting user:', error);
